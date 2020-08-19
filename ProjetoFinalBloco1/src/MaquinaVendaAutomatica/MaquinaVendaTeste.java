@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MaquinaVendaTeste {
 	public static void main(String[] args) {
 		
-		MaquinaVenda maquina1 = new MaquinaVenda("ATR-Y07");		
+		Maquinas maquina1 = new Maquinas("ATR-Y07","Google");		
 		double precoCoca=4.00,precoAgua=2.00,precoLaranja=7.0,precoLanche=10.0,precoChoco=8.0,precoDori=7.0;		
 		Scanner entrada = new Scanner(System.in);
 		ArrayList<String> produtos = new ArrayList<String>();		
@@ -266,7 +266,8 @@ public class MaquinaVendaTeste {
 					+ "\n-Chocolate: "+contChoco
 					+ "\n-Doritos: "+contDori);
 			
-						System.out.println("\nCódigo de fábrica da máquina: "+maquina1.getCosigoDaMaquina()+".");
+						System.out.println("\nFabricante: "+maquina1.getFabricante()+".");
+						System.out.println("Código de fábrica da máquina: "+maquina1.getCodigoDaMaquina()+".");
 						
 			
 			maquina1.DesligarMaquina("Piiiii...");
