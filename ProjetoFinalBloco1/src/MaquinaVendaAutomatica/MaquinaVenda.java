@@ -16,7 +16,14 @@ public class MaquinaVenda {
 			this.codigoDaMaquina = cosigoDaMaquina;
 		}
 		
-		
+		public void LigarMaquina(String som)
+		{
+			System.out.println("\n...A máquina foi ligada..."+som+"\n");
+		}
+		public void DesligarMaquina(String som)
+		{
+			System.out.println("\n...A máquina foi desligada..."+som+"\n");
+		}
 
 		
 }

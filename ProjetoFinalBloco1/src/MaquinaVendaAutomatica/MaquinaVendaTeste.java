@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MaquinaVendaTeste {
 	public static void main(String[] args) {
 		
-		MaquinaVenda objetoCodigo = new MaquinaVenda("ATR-Y07");		
+		MaquinaVenda maquina1 = new MaquinaVenda("ATR-Y07");		
 		double precoCoca=4.00,precoAgua=2.00,precoLaranja=7.0,precoLanche=10.0,precoChoco=8.0,precoDori=7.0;		
 		Scanner entrada = new Scanner(System.in);
 		ArrayList<String> produtos = new ArrayList<String>();		
@@ -48,8 +48,11 @@ public class MaquinaVendaTeste {
 			produtos.add("Doritos");
 		}
 
+		
+		maquina1.LigarMaquina("Pi...Pi...");
+		
 //MSG BOAS VINDAS 	
-		System.out.println("\n***OLÁ, SEJA BEM VINDO A MÁQUINA DE VENDAS AUTOMÁTICA!***");
+		System.out.println("***OLÁ, SEJA BEM VINDO A MÁQUINA DE VENDAS AUTOMÁTICA!***");
 		System.out.println("Primeiramente, gostaríamos de apresentar os produtos disponíveis:\n");
 		System.out.println("-Coca-cola, preço: R$ "+precoCoca+", quantidade: "+qtdCoca+".");
 		System.out.println("-Água, preço: R$ "+precoAgua+", quantidade: "+qtdAgua+".");
@@ -72,7 +75,7 @@ public class MaquinaVendaTeste {
 		 
 		while(notaInserida != 2.0 && notaInserida != 5.0 && notaInserida != 10.0 && notaInserida != 20.0 && notaInserida != 50.0)
 		{
-			System.out.println("\nNota inválida, por favor, insira uma nota válida: "
+			System.out.println("\nNota inválida, estamos devolvendo sua nota, por favor, insira uma nota válida: "
 					+ "\n2- R$2.00"
 					+ "\n5- R$5.00"
 					+ "\n10- R$10.00"
@@ -105,12 +108,12 @@ public class MaquinaVendaTeste {
 		
 //ESCOLHA DO PRODUTO		
 		System.out.println("\nEscolha um produto: "
-				+ "\n1- Coca-Cola"
-				+ "\n2- Água"
-				+ "\n3- Suco de Laranja"
-				+ "\n4- Lanche Natural"
-				+ "\n5- Chocolate"
-				+ "\n6- Doritos");		
+				+ "\n1- Coca-Cola - R$"+precoCoca
+				+ "\n2- Água- R$"+precoAgua
+				+ "\n3- Suco de Laranja- R$"+precoLaranja
+				+ "\n4- Lanche Natural- R$"+precoLanche
+				+ "\n5- Chocolate- R$"+precoChoco
+				+ "\n6- Doritos- R$"+precoDori);		
 		
 		int escolhaUsuario = entrada.nextInt();
 		
@@ -263,7 +266,10 @@ public class MaquinaVendaTeste {
 					+ "\n-Chocolate: "+contChoco
 					+ "\n-Doritos: "+contDori);
 			
-						System.out.println("\nCódigo de fábrica: "+objetoCodigo.getCosigoDaMaquina()+".");
+						System.out.println("\nCódigo de fábrica da máquina: "+maquina1.getCosigoDaMaquina()+".");
+						
+			
+			maquina1.DesligarMaquina("Piiiii...");
 			
 	}
 }
