@@ -1,0 +1,36 @@
+use db_diversos;
+
+create table tb_varejo (
+	id int(10) auto_increment,
+    nome varchar(30),
+    fabricante varchar(30),
+    preco decimal(10,2),
+    categoria varchar(30),   
+    estoque boolean,
+    qtd int(6),
+    primary key(id)
+);
+
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Playstation 4","Sony",2000.0,"eletronico",true,1000);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Apple Watch","Apple",3000.0,"eletronico",false,500);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Moto G8","Motorola",1400.0,"eletronico",true,2000);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Amstel","Amstel",4.0,"alimento",true,10000);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Nescau","Nestle",8.0,"alimento",true,1500);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Coca-cola","Coca-cola",8.0,"alimento",true,10000);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Conduite","Tigre",50.0,"construcao",false,1000);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Rejunte","Cimento Bom",20.0,"construcao",true,1000);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Azulejo","Cimento Bom",20.0,"construcao",true,1000);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Geladeira","Eletrolux",3000.0,"eletro domestico",true,500);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Microondas 4","Eletrolux",600.0,"eletro domestico",true,1000);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Máquina de lavar","Brastemp",1700.0,"eletro domestico",true,1000);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Batom","Sephora",50.0,"cosmetico",false,1000);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Lápis de olho","Sephora",50.0,"cosmetico",true,2000);
+insert into tb_varejo(nome,fabricante,preco,categoria,estoque,qtd) values ("Base","Sephora",70.0,"cosmetico",true,1000);
+
+select nome from tb_varejo where nome like 'a%';
+   
+select nome,categoria from tb_varejo where categoria = "eletronico";
+
+select nome,preco from tb_varejo where preco between 1000 and 1500;
+
+select * from tb_varejo where categoria like '%ali%';

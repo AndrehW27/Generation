@@ -1,0 +1,34 @@
+use db_diversos;
+
+create table tb_petshop (
+	id int(5) auto_increment,
+    nome varchar(50),
+    idade int(3),
+    genero varchar(20),
+    peso int(6),
+    vacina boolean,
+    primary key(id)
+);
+
+
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Bidu",14,"masculino",20,true);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Toroco",4,"masculino",80,false);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Tobby",6,"masculino",8,true);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Bily",11,"masculino",11,false);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Bob",15,"masculino",12,false);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Fred",4,"masculino",5,true);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Spike",14,"masculino",15,true);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Brutus",5,"masculino",9,true);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Toto",4,"masculino",22,true);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Lola",8,"feminino",23,true);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Diana",12,"feminino",12,false);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Laila",4,"feminino",4,true);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Kelly",3,"feminino",4,false);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Juna",14,"feminino",25,true);
+insert into tb_petshop(nome,idade,genero,peso,vacina) values ("Juma",10,"feminino",15,true);
+
+select nome,idade from tb_escola where peso > 10;
+   
+select nome,idade from tb_escola where peso > 10;
+
+select nome,idade from tb_escola where peso between 20 and 30;

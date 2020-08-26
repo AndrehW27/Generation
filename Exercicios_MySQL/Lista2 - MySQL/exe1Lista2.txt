@@ -1,0 +1,38 @@
+create database db_diversos;
+use db_diversos;
+
+create table tb_escola (
+	id int(5) auto_increment,
+    nome varchar(50),
+    idade int(3),
+    genero varchar(20),
+    matricula int(6),
+    turma char,
+    matricula_ativa boolean,
+    primary key(id)
+);
+
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("João",14,"masculino",123456,"A",true);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Carlos",14,"masculino",123457,"A",true);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Nelson",16,"masculino",123458,"B",true);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Roberta",19,"feminino",123459,"C",false);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Maria",19,"feminino",223456,"C",true);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Carlos",25,"masculino",223456,"D",false);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Denis",14,"masculino",897323,"A",true);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Robert",16,"masculino",984587,"B",true);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Helena",19,"feminino",120953,"C",false);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Joaquina",19,"feminino",122321,"C",true);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Osvaldo",25,"masculino",090987,"D",false);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Ademir",14,"masculino",342333,"A",true);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Andre",16,"masculino",543563,"B",true);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Rebeca",19,"feminino",432432,"C",false);
+insert into tb_escola(nome,idade,genero,matricula,turma,matricula_ativa) values ("Bruna",19,"feminino",321321,"C",true);
+
+
+select nome,idade from tb_escola where idade > 18;
+   
+select nome,idade from tb_escola where idade > 18;
+
+select nome,idade from tb_escola where idade between 20 and 25;
+
+
