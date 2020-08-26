@@ -1,0 +1,35 @@
+create database db_rh;
+
+create table tb_fucionarios(
+	id int(5) auto_increment,
+    nome varchar(20) not null,
+    setor int(3) not null,
+    cargo varchar(20) not null,
+    salario int(6) not null,
+    primary key(id)
+);
+
+select * from tb_funcionarios;
+
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("João",2,"comprador",3500)
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Maria",2,"compradora",3500);   
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Elaine",2,"compradora",3500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Carlos",2,"comprador",3500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Marcio",1,"engenheiro",5500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Silvia",1,"engenheira",5500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Fernanda",1,"engenheir",5500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Adailton",1,"engenheira",5500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Andre",3,"programador",6500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Vitor",3,"programador",6500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Carla",3,"programadora",6500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Jessica",3,"programadora",6500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Joana",3,"programadora",6500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Gerson",4,"supervisor",8500);
+insert into tb_funcionarios(nome,setor,cargo,salario) Values ("Elaine",4,"supervisora",8500);
+
+select * from tb_funcionarios where salario >2000;
+select * from tb_funcionarios where salario <2000;
+
+update tb_funcionarios set nome="José" where id=1;
+
+select * from tb_funcionarios;
