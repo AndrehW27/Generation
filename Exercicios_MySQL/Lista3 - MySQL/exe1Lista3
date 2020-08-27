@@ -1,0 +1,58 @@
+create database db_generation_game_online;
+use db_generation_game_online;
+
+create table tb_classe (
+	id_classe bigint auto_increment,
+    nome varchar(30) not null,
+    arma varchar(30) not null,
+    regiao varchar(30) not null,
+    traje varchar (30) not null,
+    primary key(id_classe)  
+);
+
+insert into tb_classe(nome,arma,regiao,traje) values("Mago","Cajado","Montanhas sombrias","Manto");
+insert into tb_classe(nome,arma,regiao,traje) values("Arqueiro","Arco e flecha","Florestas misteriosas","Capuz");
+insert into tb_classe(nome,arma,regiao,traje) values("Guerreiro","Espada e escudo","Cidades","Cota de malha");
+insert into tb_classe(nome,arma,regiao,traje) values("Bardo","Flauta","Tavernas","Tradicional");
+insert into tb_classe(nome,arma,regiao,traje) values("Clérigo","Maça e Fé","Igrejas","Tradicional");
+
+use db_generation_game_online;
+
+create table tb_personagem (
+	id_personagem bigint auto_increment,
+    nome varchar(30) not null,    
+    vida int(10) not null,
+    mana int(10) not null,
+    ataque int(10) not null,
+    defesa int(10) not null,    
+    id_classe bigint not null,
+    
+    primary key(id_personagem),  
+    foreign key(id_classe) references tb_classe(id_classe)
+);
+
+insert into tb_personagem(nome,vida,mana,ataque,defesa,id_classe) values("Azadium",1000,3000,3000,1000,1);
+insert into tb_personagem(nome,vida,mana,ataque,defesa,id_classe) values("Ewaelle",1000,5000,4000,1000,1);
+insert into tb_personagem(nome,vida,mana,ataque,defesa,id_classe) values("Kiog",3000,0,3000,3000,3);
+insert into tb_personagem(nome,vida,mana,ataque,defesa,id_classe) values("Fralf",1000,0,1000,1000,3);
+insert into tb_personagem(nome,vida,mana,ataque,defesa,id_classe) values("Vorrus",1500,0,1500,1500,2);
+insert into tb_personagem(nome,vida,mana,ataque,defesa,id_classe) values("Raslerd",3500,0,4500,3500,2);
+insert into tb_personagem(nome,vida,mana,ataque,defesa,id_classe) values("Chodeis",2500,2000,2500,2500,5);
+insert into tb_personagem(nome,vida,mana,ataque,defesa,id_classe) values("Thomas",500,500,500,500,5);
+insert into tb_personagem(nome,vida,mana,ataque,defesa,id_classe) values("Conayn",2500,0,3500,3500,4);
+insert into tb_personagem(nome,vida,mana,ataque,defesa,id_classe) values("Girardus",1500,0,1500,1500,4);
+
+
+select nome,ataque from tb_personagem
+where ataque > 2000;
+
+select nome,defesa from tb_personagem
+where defesa between 1000 and 2000;
+
+select tb_personagem.nome,tb_classe.nome,tb_classe.arma,tb_personagem.ataque,tb_personagem.defesa from tb_personagem
+inner join tb_classe on tb_classe.id_classe = tb_personagem.id_classe
+where tb_personagem.nome like 'c%';
+
+select tb_personagem.nome, tb_classe.nome from tb_personagem
+inner join tb_classe on tb_classe.id_classe = tb_personagem.id_classe
+where tb_classe.nome like '%arq%';

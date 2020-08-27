@@ -1,0 +1,89 @@
+create database db_pizzaria_legal;
+use db_pizzaria_legal;
+
+create table tb_categoria(
+	id_categoria bigint auto_increment,   
+    tipo varchar(30) not null,
+    massa varchar(30) not null,
+    tamanho char not null,    
+    primary key (id_categoria)
+);
+
+insert into tb_categoria(tipo, massa,tamanho) values("Salgada","grossa","M");
+insert into tb_categoria(tipo, massa,tamanho) values("Salgada","grossa","G");
+insert into tb_categoria(tipo, massa,tamanho) values("Salgada","Fina","M");
+insert into tb_categoria(tipo, massa,tamanho) values("Salgada","Fina","G");
+insert into tb_categoria(tipo, massa,tamanho) values("Doce","grossa","M");
+insert into tb_categoria(tipo, massa,tamanho) values("Doce","grossa","G");
+insert into tb_categoria(tipo, massa,tamanho) values("Doce","Fina","M");
+insert into tb_categoria(tipo, massa,tamanho) values("Doce","Fina","G");
+
+use db_pizzaria_legal;
+
+create table tb_pizza(
+	id_pizza bigint auto_increment,
+    sabor varchar(40) not null,
+    preco decimal(10,2) not null,
+    disponivel boolean not null,
+    borda boolean not null,
+    delivery boolean not null,
+    
+    id_categoria bigint not null,
+    
+    primary key(id_pizza),
+    foreign key(id_categoria) references tb_categoria(id_categoria)
+);
+
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Mussarela",35.90,true,true,false,1);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Calabresa",35.90,true,true,false,1);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Camarão",55.90,true,true,false,1);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Portuguesa",35.90,true,true,false,1);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Baiana",35.90,true,true,false,1);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Catupiry",35.90,true,true,false,1);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Morango com chocolate",35.90,true,true,false,5);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Banana com chocolate",35.90,true,true,false,5);
+
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Mussarela",35.90,true,true,false,2);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Calabresa",35.90,true,true,false,2);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Camarão",55.90,true,true,false,2);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Portuguesa",35.90,true,true,false,2);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Baiana",35.90,true,true,false,2);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Catupiry",35.90,true,true,false,2);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Morango com chocolate",35.90,true,true,false,6);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Banana com chocolate",35.90,true,true,false,6);
+
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Mussarela",35.90,true,true,false,3);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Calabresa",35.90,true,true,false,3);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Camarão",55.90,true,true,false,3);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Portuguesa",35.90,true,true,false,3);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Baiana",35.90,true,true,false,3);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Catupiry",35.90,true,true,false,3);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Morango com chocolate",35.90,true,true,false,7);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Banana com chocolate",35.90,true,true,false,7);
+
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Mussarela",35.90,true,true,false,4);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Calabresa",35.90,true,true,false,4);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Camarão",55.90,true,true,false,4);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Portuguesa",35.90,true,true,false,4);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Baiana",35.90,true,true,false,4);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Catupiry",35.90,true,true,false,4);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Morango com chocolate",35.90,true,true,false,8);
+insert into tb_pizza(sabor,preco,disponivel,borda,delivery,id_categoria) values("Banana com chocolate",35.90,true,true,false,8);
+
+
+select tb_pizza.id_pizza,tb_pizza.sabor, tb_pizza.preco, tb_pizza.id_categoria from tb_pizza
+where preco > 45;
+
+select tb_pizza.id_pizza,tb_pizza.sabor, tb_pizza.preco, tb_pizza.id_categoria from tb_pizza
+where preco between 29  and 60;
+
+select tb_pizza.id_pizza,tb_pizza.sabor, tb_pizza.preco, tb_pizza.id_categoria from tb_pizza
+where sabor like 'c%';
+
+select * from tb_pizza
+inner join tb_categoria on tb_categoria.id_categoria = tb_pizza.id_categoria;
+
+select tb_pizza.id_pizza,tb_pizza.id_categoria,tb_pizza.sabor,tb_categoria.tipo, tb_categoria.id_categoria from tb_pizza
+inner join tb_categoria on tb_categoria.id_categoria = tb_pizza.id_categoria
+where tb_categoria.tipo = "Doce";
+

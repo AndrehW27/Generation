@@ -1,0 +1,33 @@
+create database db_farmacia_do_bem;
+
+use db_farmacia_do_bem;
+
+create table tb_categoria(
+	id_categoria bigint auto_increment,
+    nome varchar(30) not null,
+    disponivel boolean,
+    
+    primary key(id_categoria)
+);
+
+insert into tb_categoria(nome, disponivel) values ("Cosméticos",1);
+insert into tb_categoria(nome, disponivel) values ("Remédios",1);
+insert into tb_categoria(nome, disponivel) values ("Suplementos",1);
+insert into tb_categoria(nome, disponivel) values ("Alimentos",1);
+insert into tb_categoria(nome, disponivel) values ("Outros",1);
+
+select * from tb_produto
+where valor > 50;
+
+select * from tb_produto
+where valor between 3 and 60;
+
+select * from tb_produto
+where nome like 'b%';
+
+select * from tb_produto
+inner join tb_categoria on tb_categoria.id_categoria = tb_produto.id_categoria;
+
+select * from tb_produto
+inner join tb_categoria on tb_categoria.id_categoria = tb_produto.id_categoria
+where tb_categoria.nome like '%cos%';
