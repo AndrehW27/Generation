@@ -1,0 +1,15 @@
+*{
+    scroll-behavior: smooth;
+
+}
+
+navbar-cor{
+    background-color: black;
+}
+
+.top{ 
+    position: fixed;
+    transform: translate(20px,-20px);
+    bottom: 0;
+    left: 0;
+}   
