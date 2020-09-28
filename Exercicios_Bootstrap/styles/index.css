@@ -1,15 +1,57 @@
 *{
     scroll-behavior: smooth;
+    
 
 }
 
-navbar-cor{
-    background-color: black;
-}
 
 .top{ 
     position: fixed;
     transform: translate(20px,-20px);
     bottom: 0;
     left: 0;
+    z-index: 999;
 }   
+
+.logo{
+    width: 40px;
+    height: 40px;
+    background-image: url(../assets/generation-logo.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 6px;
+}
+
+.whats{
+    display: flex;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/whatsapp.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+;
+
+
+}
+.numero{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    z-index: 9999;     
+    font-size: 24px;
+    background-color: #007bff;
+    color: #FFF;
+    padding: 6px 15px;
+    border-radius: 40px;
+;
+
+}

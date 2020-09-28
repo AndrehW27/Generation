@@ -47,6 +47,10 @@
     <!-- NAVBAR -->
     <nav id="home" class="navbar navbar-expand-lg navbar-light bg-primary navbar-cor ">
 
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+            <div class="logo"></div>
+        </a>
+
 
         <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
             <ul class="navbar-nav mr-auto">
@@ -73,14 +77,17 @@
                     </div>
                 </li>
 
+                
+
             </ul>
+            
 
         </div>
     </nav>
     <!-- / NAVBAR -->
 
     <!-- SE INSCREVA -->
-    <div id="inscreva" class="container d-flex align-items-center justify-content-center">
+    <div id="inscreva" class="container d-flex align-items-center justify-content-center ">
         <div class="row mt-5">
             <div class="col-md-6">
                 <div class="col d-flex flex-column align-items-center">
@@ -92,38 +99,52 @@
                         recusandae adipisci distinctio ipsam, magnam, quod minus quidem laborum cum. Assumenda explicabo
                         est consequatur atque, officiis dicta.</p>
                 </div>
+
             </div>
             <!-- FORM -->
-            <div class="col-md-6 mt-5">
-                <div class="">
-                    <form class="">
-                        <div class="form-group pt-2">
-                            <label for="exampleInputEmail1">Nome Completo</label>
-                            <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
-                                placeholder="Seu nome">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Endereço de email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Seu email">
-                        </div>
+            <div class="col-md-6 mt-5 d-flex flex-column align-items-center justify-content-between ">
 
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Senha</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-                        </div>
+                <form class="w-75">
+                    <div class="form-group pt-2">
+                        <label for="exampleInputEmail1">Nome Completo</label>
+                        <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+                            placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Endereço de email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Seu email">
+                    </div>
 
-                        <button type="submit" class="btn btn-primary bg-primary">Inscreva-se</button>
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Senha</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary bg-primary">Inscreva-se</button>
+                </form>
+
             </div>
             <!-- FORM -->
         </div>
 
 
+        <!-- WHATSAPP -->
+
+        <a href="#" onmouseover="openWhats()" onmouseout="closeWhats()">
+            <div id="whats" class="whats"></div>
+        </a>
+        <div id="numero" class="numero">(11) 12345-6789</div>
+
+        <!-- / WHATSAPP -->
 
     </div>
     <!--/ SE INSCREVA -->
+
+
+
+
+
 
     <!-- VIDEO -->
     <div id="curso" class="container">
@@ -146,143 +167,153 @@
                 </div>
             </div>
         </div>
-        <!-- / VIDEO -->
+    </div>
+    <!-- / VIDEO -->
 
-        <!-- INSTRUTORES -->
-        <h2 id="instrutores" class="text-center mt-5">Instrutores</h2>
+    <!-- INSTRUTORES -->
+    <h2 id="instrutores" class="text-center mt-5">Instrutores</h2>
 
 
-        <div class="container-fluid mb-5">
-            <div class="row mt-5 mb-5">
-                <div class="col-md-3 ">
-                    <div class="">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="./assets/camilla.jpg" alt="Imagem de capa do card">
-                            <div class="card-body">
-                                <h5 class="card-title">Camilla</h5>
-                                <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
-                                    preencher o conteúdo do card</p>
-                                <a href="#" class="btn btn-primary bg-primary">Saiba mais</a>
-                            </div>
-                        </div>
+    <div class="container-fluid mb-5">
+        <div class="row mt-5 mb-5 mx-5">
+            <div class="col-md-3 d-flex justify-content-center align-items-center">
+
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/camilla.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Camilla</h5>
+                        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
+                            preencher o conteúdo do card</p>
+                        <a href="#" class="btn btn-primary bg-primary">Saiba mais</a>
                     </div>
                 </div>
 
-                <div class="col-md-3 ">
-                    <div class="">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="./assets/luis.jpg" alt="Imagem de capa do card">
-                            <div class="card-body">
-                                <h5 class="card-title">Luis</h5>
-                                <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
-                                    preencher o conteúdo do card</p>
-                                <a href="#" class="btn btn-primary bg-primary">Saiba mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 ">
-                    <div class="">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="./assets/marcelo.jpg" alt="Imagem de capa do card">
-                            <div class="card-body">
-                                <h5 class="card-title">Marcelo</h5>
-                                <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
-                                    preencher o conteúdo do card.</p>
-                                <a href="#" class="btn btn-primary bg-primary"> Saiba mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 ">
-                    <div class="">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="./assets/thiago.jpg" alt="Imagem de capa do card">
-                            <div class="card-body">
-                                <h5 class="card-title">Thiago</h5>
-                                <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
-                                    preencher o conteúdo do card.</p>
-                                <a href="#" class="btn btn-primary bg-primary">Saiba mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-        </div>
-        <!-- / INSTRUTORES -->
+            <div class="col-md-3 d-flex justify-content-center align-items-center">
 
-        <h2 class="text-center mt-5 mb-5">Alumni</h2>
-
-
-        <!-- CARROSSEL -->
-
-        <div id="alumni" class="container mb-5 w-75">
-            <div class="row">
-                <div class="col-12">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100 " src="./assets/perfil.jpg" alt="Primeiro Slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./assets/jessica-editada.jpg" alt="Segundo Slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./assets/carol.jpg" alt="Terceiro Slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./assets/mauricio.jpg" alt="Terceiro Slide">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Anterior</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Próximo</span>
-                        </a>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/luis.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Luis</h5>
+                        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
+                            preencher o conteúdo do card</p>
+                        <a href="#" class="btn btn-primary bg-primary">Saiba mais</a>
                     </div>
                 </div>
+
+            </div>
+
+            <div class="col-md-3 d-flex justify-content-center align-items-center ">
+
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/marcelo.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Marcelo</h5>
+                        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
+                            preencher o conteúdo do card.</p>
+                        <a href="#" class="btn btn-primary bg-primary"> Saiba mais</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-3 d-flex justify-content-center align-items-center">
+
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/thiago.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Thiago</h5>
+                        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
+                            preencher o conteúdo do card.</p>
+                        <a href="#" class="btn btn-primary bg-primary">Saiba mais</a>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-        <!-- / CARROSSEL -->
+    </div>
+    <!-- / INSTRUTORES -->
+
+    <h2 class="text-center mt-5 mb-5">Alumni</h2>
 
 
-        <!-- FOOTER -->
-        <div id="contato" class="container-fluid ">
-            <div class="row ">
-                <div class="col-12 bg-primary d-flex align-items-center justify-content-around ">
-                    <div class="facebook mb-5 mt-5">
-                        <a href="#home"><img src="./assets/facebook_white.png" width="50px" height="50px" alt=""></a>
+    <!-- CARROSSEL -->
+
+    <div id="alumni" class="container mb-5 w-50">
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100 " src="./assets/perfil.jpg" alt="Primeiro Slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/jessica-editada.jpg" alt="Segundo Slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/carol.jpg" alt="Terceiro Slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/mauricio.jpg" alt="Terceiro Slide">
+                        </div>
                     </div>
-                    <div class="instagram"><a href="#home"><img src="./assets/instagram_white.png" width="50px"
-                                height="50px" alt=""></a></div>
-                    <div class="email"><a href="#home"><img src="./assets/twitter_white.png" width="50px" height="50px"
-                                alt=""></a>
-                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- / CARROSSEL -->
+
+
+    <!-- FOOTER -->
+    <div id="contato" class="container-fluid ">
+        <div class="row">
             <div class="col-12 bg-primary">
-                <p class="text-center text-white pt-2 pb-5">Todos os direitos reservados: Generation Brasil&copy</p>
+                <p class="text-center text-white my-4 ">Contato</p>
+            </div>
+
+        </div>
+        <div class="row ">
+            <div class="col-12 bg-primary d-flex align-items-center justify-content-center ">
+                <div class="facebook mb-5 px-3">
+                    <a href="https://www.facebook.com/generationbrasil/" target="_blank"><img
+                            src="./assets/facebook_white.png" width="50px" height="50px" alt=""></a>
+                </div>
+                <div class="instagram mb-5 px-3">
+                    <a href="https://www.instagram.com/generationbrasil/?hl=pt-br" target="_blank"><img
+                            src="./assets/instagram_white.png" width="50px" height="50px" alt=""></a>
+                </div>
+                <div class="email mb-5 px-3"><a href="https://twitter.com/generation_bra" target="_blank"><img
+                            src="./assets/twitter_white.png" width="50px" height="50px" alt=""></a>
+                </div>
             </div>
         </div>
-        <!-- / FOOTER -->
+        <div class="row">
+            <div class="col-12 bg-primary">
+                <p class="text-center text-white pt-2 pb-5">Todos os direitos reservados: &copyGeneration Brasil</p>
+            </div>
 
+        </div>
+    </div>
+    <!-- / FOOTER -->
 
-
-
+    <script src="./scripts/index.js"></script>
 
 
 </body>
